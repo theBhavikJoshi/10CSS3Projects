@@ -1,0 +1,174 @@
+/* START - Default Styles */
+
+body {
+  font-family: "Open Sans";
+  font-size: 1.125rem;
+  line-height: 1.618em;
+  color: #2C2E3E;
+  background: #F6F6F6;
+}
+
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+h3 {
+	text-align: center;
+	color: #EE2B47;
+}
+
+a {
+  color: #EE2B47;
+}
+
+/* END - Default Styles */
+
+/* START - Fade in Background Effect */
+
+a.fade_in_bg {
+	text-decoration: none;
+	border-bottom: 0.0625em dotted #EE2B47;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+	padding-bottom: 0.05em;
+	transition: all 0.30s;
+}
+
+a.fade_in_bg:hover {
+	background: #EE2B47;
+	color: #fff;
+	transition: all 0.30s;
+}
+
+/* END - Fade in Background Effect */
+
+/* START - Fade in from Directions */
+
+a[class^="slide"] {
+	text-decoration: none;
+	line-height: 1.5em;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+	border-bottom: 0.0625em dotted #EE2B47;
+	position: relative;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+a[class^="slide"]::after {
+	content: attr(data-linktext);
+	background: #EE2B47;
+	color: #fff;
+	position: absolute;
+	display: block;
+	text-align: center;
+}
+
+a.slide_from_left::after {
+	top: 0;
+	right: 100%;
+	left: -100%;
+	transition: all 0.35s;
+}
+
+a[class^="slide"]:hover::after {
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transition: all 0.35s;
+}
+
+a[class^="slide"]:hover {
+	border-bottom: 0.0625em solid #EE2B47;
+}
+
+a[class^="slide"] {
+	overflow: hidden;
+}
+
+a.slide_from_right::after {
+	top: 0;
+	right: -100%;
+	left: 100%;
+}
+
+a.slide_from_top::after {
+	top: -100%;
+	bottom: 100%;
+}
+
+a.slide_from_bottom::after {
+	top: 100%;
+	bottom: -100%;
+}
+
+/* END - Fade in from Directions */
+
+/* START - Fade in Underline */
+
+a.fade_in_underline {
+	text-decoration: none;
+	padding-left: 0.125em;
+	padding-right: 0.125em;
+	padding-bottom: 0.05em;
+	border-bottom: 0.125em solid #F6F6F6;
+	transition: all 0.30s;
+}
+
+a.fade_in_underline:hover {
+	border-bottom: 0.125em solid #EE2B47;
+	transition: all 0.30s;
+}
+
+a[class^='underline'] {
+	text-decoration: none;
+	padding-left: 0.125em;
+	padding-right: 0.125em;
+	padding-bottom: 0.05em;
+	position: relative;
+}
+
+a[class^='underline']::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	border-bottom: 0.125em solid #EE2B47;
+	transition: all 0.3s;
+}
+
+a[class^='underline']::after {
+	transition: all 0.3s;
+}
+
+a.underline_from_left::after {
+	left: 0;
+	right: 100%;
+}
+
+a.underline_from_left:hover::after {
+	right: 0;
+}
+
+a.underline_from_right::after {
+	left: 100%;
+	right: 0;
+}
+
+a.underline_from_right:hover::after {
+	left: 0;
+}
+
+a.underline_from_center::after {
+	left: 50%;
+	right: 50%;
+}
+
+a.underline_from_center:hover::after {
+	left: 0;
+	right: 0;
+}
+
+/* END - Fade in Underline */
