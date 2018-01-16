@@ -1,0 +1,176 @@
+/* Default Styles */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Supermercado+One');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #F9F7F7;
+}
+.wrapper {
+  max-width: 60rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.heading {
+  text-align: center;
+  font-family: 'Supermercado One', cursive;
+  color: #574B90;
+}
+
+.lowerHeading {
+  margin-top: 5%;
+}
+
+/* START - Using Gradient */
+
+.gradientbg {
+  background: linear-gradient(to right, #3F72AF 20%, #DBE2EF 20%, #DBE2EF 80%, #112D4E 80%);
+}
+
+.gradientbg::before,
+.gradientbg::after {
+  content: " ";
+  display: table;
+}
+.gradientbg::after {
+  clear: both;
+}
+.gradientbg .sidebar {
+  width: 20%;
+  padding: 1.618rem;
+  color: #fff;
+}
+.gradientbg main {
+  width: 60%;
+  padding: 1.618rem;
+  float: left;
+  margin-left: 20%;
+}
+.gradientbg .left {
+  float: left;
+  margin-left: -80%;
+}
+.gradientbg .right {
+  float: right;
+}
+
+@media (max-width: 50rem) {
+  .gradientbg {
+    background: none;
+  }
+
+  .gradientbg main {
+    background: #DBE2EF;
+  }
+
+  .gradientbg main {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+
+  .gradientbg .sidebars::before,
+  .gradientbg .sidebars::after {
+    content: ' ';
+    display: table;
+  }
+
+  .gradientbg .sidebars::after {
+    clear: both;
+  }
+  
+  .gradientbg .sidebar {
+    width: 50%;
+  }
+
+  .gradientbg .left {
+    margin-left: 0;
+  }
+
+  .gradientbg .sidebars {
+    background: linear-gradient(to right, #3F72AF 50%, #112D4E 50%);
+  }
+  
+}
+
+@media (max-width: 30rem) {
+  .gradientbg .sidebars {
+    background: none;
+  }
+
+  .gradientbg .sidebar {
+    width: 100%;
+  }
+
+  .gradientbg .left {
+    float: none;
+    background: #3F72AF;
+  }
+
+  .gradientbg .right {
+    float: none;
+    background: #112D4E;
+  }
+}
+
+/* END - Using Gradient */
+
+
+/* START - Using Flexbox */
+
+.flexbg {
+  display: flex;
+}
+
+.flexbg .sidebar {
+  width: 20%;
+  padding: 1.618rem;
+  color: #fff;
+}
+
+.flexbg main {
+  width: 60%;
+  padding: 1.618rem;
+  order: 2;
+  background: #DBE2EF;
+}
+
+.flexbg .left {
+  order: 1;
+  background: #3F72AF;
+}
+
+.flexbg .right {
+  order: 3;
+  background: #112D4E;
+}
+
+
+@media (max-width: 50rem) {
+  .flexbg {
+    flex-wrap: wrap;
+  }
+
+  .flexbg main {
+    width: 100%;
+    order: 1;
+  }
+
+  .flexbg .sidebar {
+    width: 50%;
+  }
+
+  .flexbg .left {
+    order: 2;
+  }
+}
+
+@media (max-width: 30rem) {
+  .flexbg .sidebar {
+    width: 100%;
+  }
+}
+
+/* END - Using Flexbox */
