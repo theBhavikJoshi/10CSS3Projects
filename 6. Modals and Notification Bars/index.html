@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modals and Notification Bars</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<!-- START - Notification -->
+	<div id="one" class="notification">
+	  <div class="content">
+	    <p>This is the "Success" notification's text content</p>
+	    <div class="close"><a href="#">Close</a></div>
+	  </div>
+	</div>
+
+	<div id="two" class="notification warning">
+	  <div class="content">
+	    <p>This is the "Warning" notification's text content</p>
+	    <div class="close"><a href="#">Close</a></div>
+	  </div>
+	</div>
+	<!-- END - Notification -->
+
+	<!-- Heading -->
+	<h1>Modals & Notification Bars</h1>
+
+	<!-- START - Modal -->
+	<div class="wrapper">
+
+		<p>My father had a small estate in default link Nottinghamshire: I was the third of five sons. He sent me to Emanuel College in Cambridge at fourteen years old, where I resided three years, and applied myself close to my studies; but the charge of maintaining me, although I had a very scanty allowance, being too great for a narrow fortune, I was bound apprentice to Mr. James Bates, an eminent surgeon in London, with whom I continued four years. </p>
+		
+		<div class="modal_container">
+			<h2>Modal Control</h2>
+			<p><a href="#infopanel" class="open_modal">Open Modal</a>
+		    <div id="infopanel" class="modal">
+		      <div class="content">
+		        <h2>Modal Panel</h2>
+		        <p>This panel could provide information or display images.</p>
+		        <p>When you're done click the X button to close.</p>
+		        <div class="close"><a href="#">Close</a></div>
+		      </div>
+		    </div>
+		  </p>	
+		</div>
+		<br>
+		
+		<div class="notification_container">
+			<h2>Notification Control</h2>
+			<!-- START - Notification Controls -->
+		  <p><a href="#one" class="open_notification">Open "Success" Notification</a></p>
+			<p><a href="#two" class="open_notification">Open "Warning" Notification</a></p>
+			<!-- END - Notification Controls -->
+		</div>
+
+	</div>
+	<!-- END - Modal -->
+	
+</body>
+</html>
